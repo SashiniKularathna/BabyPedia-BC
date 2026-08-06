@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9e75d4;
+      }
+
+      .cls-2 {
+        fill: #ff97bf;
+      }
+
+      .cls-3 {
+        fill: #47d7ab;
+      }
+
+      .cls-4 {
+        fill: #fff4a4;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="24" cy="24" r="24"/>
+  <g>
+    <rect class="cls-3" x="4.55" y="16.74" width="32.25" height="7.67" transform="translate(-8.49 21.19) rotate(-46.06)"/>
+    <g>
+      <rect class="cls-4" x="9.78" y="26.9" width="1.26" height="5.42" transform="translate(-18.14 16.56) rotate(-46.06)"/>
+      <rect class="cls-4" x="12.09" y="24.5" width="1.26" height="5.42" transform="translate(-15.7 17.49) rotate(-46.06)"/>
+      <rect class="cls-4" x="14.4" y="22.11" width="1.26" height="5.42" transform="translate(-13.27 18.42) rotate(-46.06)"/>
+      <rect class="cls-4" x="16.71" y="19.71" width="1.26" height="5.42" transform="translate(-10.84 19.35) rotate(-46.06)"/>
+      <rect class="cls-4" x="19.01" y="17.32" width="1.26" height="5.42" transform="translate(-8.41 20.28) rotate(-46.06)"/>
+      <rect class="cls-4" x="21.32" y="14.92" width="1.26" height="5.42" transform="translate(-5.98 21.2) rotate(-46.06)"/>
+      <rect class="cls-4" x="23.63" y="12.53" width="1.26" height="5.42" transform="translate(-3.55 22.13) rotate(-46.06)"/>
+      <rect class="cls-4" x="25.94" y="10.13" width="1.26" height="5.42" transform="translate(-1.12 23.06) rotate(-46.06)"/>
+      <rect class="cls-4" x="28.25" y="7.74" width="1.26" height="5.42" transform="translate(1.32 23.99) rotate(-46.06)"/>
+    </g>
+    <rect class="cls-2" x="24.03" y="20.77" width="5.39" height="23.47" transform="translate(30.03 -9.44) rotate(43.94)"/>
+    <polygon class="cls-2" points="39.97 18.75 28.77 21.97 37.16 30.06 39.97 18.75"/>
+  </g>
+</svg>
