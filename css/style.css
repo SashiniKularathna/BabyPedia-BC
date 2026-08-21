@@ -55,7 +55,7 @@
       padding:10px 5%;
     }
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .nav-logo img{height:46px;width:auto}
+    .nav-logo img{height:35px;width:auto}
     .nav-links{display:flex;gap:26px}
     .nav-links a{color:var(--mid);text-decoration:none;font-weight:700;font-size:0.88rem;transition:color .2s}
     .nav-links a:hover{color:var(--primary)}
@@ -69,8 +69,8 @@
 
     /* ─── HERO ──────────────────────────────────────── */
     .hero{
-      min-height:100vh;display:flex;align-items:center;
-      padding:100px 5% 60px;
+      display:flex;align-items:center;
+      padding:65px 0% 10px;
       background:linear-gradient(150deg,#fff5f0 0%,#fff9f7 45%,#fff0ea 100%);
       position:relative;overflow:hidden;
     }
@@ -98,7 +98,7 @@
 
     .hero-inner{
       display:grid;grid-template-columns:1fr 1fr;
-      align-items:center;gap:56px;max-width:1200px;margin:0 auto;width:100%;
+      align-items:center;gap:40px;max-width:1200px;margin:0 auto;width:100%;
       position:relative;z-index:1;
     }
 
@@ -107,19 +107,19 @@
       background:rgba(107,63,191,0.1);border:1px solid rgba(107,63,191,0.2);
       color:var(--primary);border-radius:50px;padding:6px 14px;
       font-size:0.8rem;font-weight:700;letter-spacing:0.5px;
-      text-transform:uppercase;margin-bottom:18px;
+      text-transform:uppercase;margin-bottom:14px;
     }
     h1.hero-headline{
       font-size:clamp(2.2rem,4.5vw,3.5rem);
-      line-height:1.15;color:var(--dark);margin-bottom:18px;font-weight:800;
+      line-height:1.1;color:var(--dark);margin-bottom:10px;font-weight:800;
     }
     h1.hero-headline em{color:var(--primary);font-style:normal}
     .hero-sub{
-      font-size:1rem;line-height:1.72;color:var(--mid);
-      max-width:440px;margin-bottom:34px;
+      font-size:1rem;line-height:1.6;color:var(--mid);
+      max-width:440px;margin-bottom:14px;
     }
 
-    .store-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+    .store-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
     .store-btn{
       display:flex;align-items:center;gap:12px;
       background:var(--dark);color:#fff;text-decoration:none;
@@ -143,7 +143,7 @@
     .tf1{background:#E8D8FF}.tf2{background:#FFD8C8}.tf3{background:#D8E8FF}
 
     /* ─── HERO QR BLOCK ──────────────────────────────── */
-    .hero-qr-block{margin-bottom:28px}
+    .hero-qr-block{margin-bottom:10px}
     .hero-qr-card{
       display:inline-flex;align-items:center;gap:0;
       background:#fff;border-radius:16px;
@@ -230,18 +230,18 @@
     }
     .section-sub{
       text-align:center;color:var(--mid);font-size:1rem;max-width:520px;
-      margin:0 auto 48px;line-height:1.65;
+      margin:0 auto 32px;line-height:1.6;
     }
 
     /* ─── FEATURES ──────────────────────────────────── */
-    .features{padding:90px 5%;background:#fff}
+    .features{padding:20px 5% 10px;background:#fff}
     .features-grid{
       display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:22px;max-width:1100px;margin:0 auto;
+      gap:18px;max-width:1100px;margin:0 auto;
     }
     .feature-card{
       background:var(--off-white);border:1.5px solid var(--primary-l);
-      border-radius:var(--radius);padding:26px 22px;
+      border-radius:var(--radius);padding:22px 20px;
       transition:transform .25s,box-shadow .25s,border-color .25s;
     }
     .feature-card:hover{
@@ -305,9 +305,9 @@
     .planning-tag{background:rgba(100,200,140,0.15);color:#2E8A5A}
 
     /* ─── REVIEWS ───────────────────────────────────── */
-    .reviews{padding:90px 5%;background:var(--primary-l)}
+    .reviews{padding:10px 5%;background:var(--primary-l)}
     .reviews-inner{max-width:1100px;margin:0 auto}
-    .reviews-columns{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:46px}
+    .reviews-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
     .reviews-store-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
     .store-badge{
       display:flex;align-items:center;gap:9px;
@@ -323,8 +323,8 @@
 
     .review-card{
       background:#fff;border:1.5px solid var(--primary-l);
-      border-radius:var(--radius);padding:20px 22px;
-      margin-bottom:14px;transition:box-shadow .2s;
+      border-radius:var(--radius);padding:18px 20px;
+      margin-bottom:10px;transition:box-shadow .2s;
     }
     .review-card:hover{box-shadow:0 8px 24px rgba(245,165,140,0.18)}
     .review-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
@@ -346,14 +346,14 @@
     .r-title{font-weight:800;font-size:0.9rem;color:var(--dark);margin-bottom:5px}
     .r-body{font-size:0.85rem;color:var(--mid);line-height:1.62}
     .reviews-note{
-      text-align:center;margin-top:28px;font-size:0.8rem;color:var(--light-txt);
+      text-align:center;margin-top:18px;font-size:0.8rem;color:var(--light-txt);
       background:rgba(245,165,140,0.06);border:1px dashed rgba(245,165,140,0.3);
       border-radius:10px;padding:10px 16px;
     }
 
     /* ─── DOWNLOAD ──────────────────────────────────── */
     .download{
-      padding:90px 5%;
+      padding:20px 5% 10px;
       background:linear-gradient(135deg,#fff0ea 0%,#ffeee8 100%);
       position:relative;overflow:hidden;text-align:center;
     }
@@ -366,11 +366,11 @@
     .download-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
     .download-title{
       font-size:clamp(2rem,4vw,3rem);font-weight:800;
-      color:var(--dark);margin-bottom:16px;line-height:1.2;
+      color:var(--dark);margin-bottom:12px;line-height:1.2;
     }
     .download-title em{color:var(--primary);font-style:normal}
-    .download-sub{color:var(--mid);font-size:1rem;line-height:1.65;margin-bottom:36px}
-    .download-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;position:relative;z-index:10}
+    .download-sub{color:var(--mid);font-size:1rem;line-height:1.6;margin-bottom:24px}
+    .download-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;position:relative;z-index:10}
     .dl-btn{
       display:flex;align-items:center;gap:14px;
       color:#fff;text-decoration:none;
@@ -415,22 +415,22 @@
     /* ─── FOOTER ────────────────────────────────────── */
     footer{
       background:var(--dark);color:rgba(255,255,255,0.65);
-      padding:52px 5% 28px;
+      padding:36px 5% 20px;
     }
     .footer-inner{
       max-width:1100px;margin:0 auto;
-      display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;
-      padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.08);
+      display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;
+      padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08);
     }
-    .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:10px}
     .footer-logo img{height:50px;width:auto;filter:brightness(0) invert(1)}
-    .footer-desc{font-size:0.87rem;line-height:1.65;max-width:280px}
-    .footer-col-title{color:#fff;font-weight:800;margin-bottom:14px;font-size:0.9rem}
-    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .footer-desc{font-size:0.87rem;line-height:1.6;max-width:280px}
+    .footer-col-title{color:#fff;font-weight:800;margin-bottom:10px;font-size:0.9rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
     .footer-col ul a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.86rem;transition:color .2s}
     .footer-col ul a:hover{color:var(--primary-l)}
     .footer-bottom{
-      max-width:1100px;margin:20px auto 0;
+      max-width:1100px;margin:14px auto 0;
       display:flex;justify-content:space-between;align-items:center;
       flex-wrap:wrap;gap:10px;font-size:0.79rem;color:rgba(255,255,255,0.35);
     }
@@ -439,7 +439,7 @@
 
     /* ─── RESPONSIVE ────────────────────────────────── */
     @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;text-align:center;gap:40px}
+      .hero-inner{grid-template-columns:1fr;text-align:center;gap:28px}
       .hero-sub{max-width:100%}
       .store-buttons{justify-content:center}
       .hero-trust{justify-content:center}
