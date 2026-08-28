@@ -70,7 +70,7 @@
     /* ─── HERO ──────────────────────────────────────── */
     .hero{
       display:flex;align-items:center;
-      padding:65px 0% 10px;
+      padding:65px 5% 10px;
       background:linear-gradient(150deg,#fff5f0 0%,#fff9f7 45%,#fff0ea 100%);
       position:relative;overflow:hidden;
     }
@@ -133,6 +133,16 @@
     .store-btn-label small{font-size:0.68rem;opacity:0.75;display:block;line-height:1}
     .store-btn-label strong{font-size:0.95rem;line-height:1.3}
 
+    /* ─── BRAND LOGOS ───────────────────────────────── */
+    /* fixed height + auto width preserves each logo's real aspect ratio
+       instead of forcing every icon into the same square box */
+    .store-icon{height:26px;width:auto;object-fit:contain;flex-shrink:0}
+    .badge-icon{height:18px;width:auto;object-fit:contain;flex-shrink:0}
+    /* the Apple mark ships as a white glyph on a black square; screen-blending
+       it onto the already-dark pill/badge behind it makes the black square
+       disappear, leaving just the white glyph */
+    .apple-icon{mix-blend-mode:screen}
+
     .hero-trust{display:flex;align-items:center;gap:12px;font-size:0.82rem;color:var(--light-txt);font-weight:600}
     .trust-faces{display:flex}
     .tf{
@@ -146,10 +156,10 @@
     .hero-qr-block{margin-bottom:10px}
     .hero-qr-card{
       display:inline-flex;align-items:center;gap:0;
-      background:#fff;border-radius:16px;
+      background:#fff;border-radius:12px;
       border:1.5px solid var(--primary-l);
       box-shadow:0 6px 24px rgba(245,165,140,0.15);
-      padding:14px 20px;gap:16px;
+      padding:8px;
     }
     .hero-qr-col{display:flex;flex-direction:column;align-items:center;gap:8px}
     .hero-qr-wrap{
@@ -201,17 +211,61 @@
     .phone-screen{
       border-radius:32px;overflow:hidden;
       background:#fff;
+      position:relative; /* anchors the camera-cutout pseudo-elements below */
+      aspect-ratio:9/19.5; /* fixes the frame's shape so it no longer resizes
+        to match whatever screenshot is dropped in — any image now gets
+        cropped to fill it instead */
     }
-    .phone-screen img{width:100%;height:auto;display:block}
+    .phone-screen img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* ─── DEVICE MOCKUP STYLING (CSS-only, no product photos) ──────
+       Each frame is styled with its device's signature camera detail
+       instead of a real product photo, since Apple/Samsung marketing
+       images are copyrighted and can't be redistributed here. */
+
+    /* iPhone 17 — black frame + centered Dynamic Island */
+    .phone-device.phone-iphone{
+      background:linear-gradient(145deg,#3a3a3c,#0a0a0a);
+      border-radius:54px;
+    }
+    .phone-device.phone-iphone .phone-screen{border-radius:46px}
+    .phone-device.phone-iphone .phone-screen::before{
+      content:'';position:absolute;
+      top:12px;left:50%;transform:translateX(-50%);
+      width:32%;height:22px;background:#0a0a0a;
+      border-radius:20px;z-index:5;
+    }
+
+    /* Samsung Galaxy S24 — graphite frame, tighter corners + punch-hole camera */
+    .phone-device.phone-samsung{
+      background:linear-gradient(145deg,#3d3d40,#1b1b1d);
+      border-radius:32px;
+      padding:7px;
+    }
+    .phone-device.phone-samsung .phone-screen{border-radius:25px}
+    .phone-device.phone-samsung .phone-screen::before{
+      content:'';position:absolute;
+      top:11px;left:50%;transform:translateX(-50%);
+      width:11px;height:11px;background:#0a0a0a;
+      border:1.5px solid rgba(255,255,255,0.08);
+      border-radius:50%;z-index:5;
+    }
 
     .float-badge{
       position:absolute;background:#fff;border-radius:14px;
       box-shadow:0 8px 24px rgba(107,63,191,0.15);
       padding:10px 14px;display:flex;align-items:center;gap:9px;
       font-size:0.75rem;font-weight:700;color:var(--dark);white-space:nowrap;
+      /* keep the badge above the phone mockups (z-index:2) — without this,
+         the Sinhala/Tamil labels (wider than the English text) get partly
+         tucked behind the phone image */
+      z-index:4;
     }
     .fb-left{left:-70px;top:28%;animation:bob1 5s ease-in-out infinite 0.8s}
-    .fb-right{right:-70px;bottom:22%;animation:bob2 6s ease-in-out infinite 2s}
+    /* was right:-70px, which pushed this badge past the viewport edge (and got
+       clipped by body{overflow-x:hidden}) on common laptop widths like
+       1280–1440px — pulled it back in so "Next vaccine" stays fully visible */
+    .fb-right{right:-16px;bottom:22%;animation:bob2 6s ease-in-out infinite 2s}
     .fb-icon{
       width:30px;height:30px;border-radius:8px;
       display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -423,7 +477,7 @@
       padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08);
     }
     .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-    .footer-logo img{height:50px;width:auto;filter:brightness(0) invert(1)}
+    .footer-logo img{height:30px;width:auto}
     .footer-desc{font-size:0.87rem;line-height:1.6;max-width:280px}
     .footer-col-title{color:#fff;font-weight:800;margin-bottom:10px;font-size:0.9rem}
     .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -458,10 +512,26 @@
     [data-lang="si"] body,[data-lang="si"] .hero-sub,[data-lang="si"] .feature-desc,
     [data-lang="si"] .section-sub,[data-lang="si"] .r-body,[data-lang="si"] .download-sub{
       font-family:'Noto Sans Sinhala','Nunito',sans-serif;
+      line-height:1.85;
     }
     [data-lang="ta"] body,[data-lang="ta"] .hero-sub,[data-lang="ta"] .feature-desc,
     [data-lang="ta"] .section-sub,[data-lang="ta"] .r-body,[data-lang="ta"] .download-sub{
       font-family:'Noto Sans Tamil','Nunito',sans-serif;
+      line-height:1.85;
+    }
+    /* Sinhala/Tamil vowel signs & conjuncts sit taller than Latin glyphs and
+       get clipped by the tight 1.1–1.2 line-heights used on headings — loosen
+       those specifically for these two languages */
+    [data-lang="si"] h1,[data-lang="si"] h2,[data-lang="si"] .feature-title,
+    [data-lang="si"] .tool-title,[data-lang="si"] .r-title,
+    [data-lang="ta"] h1,[data-lang="ta"] h2,[data-lang="ta"] .feature-title,
+    [data-lang="ta"] .tool-title,[data-lang="ta"] .r-title{
+      line-height:1.5;
+    }
+    /* Sinhala script renders noticeably wider/heavier than Latin at the same
+       font-size, which was pushing the hero title too big — scale it down */
+    [data-lang="si"] h1.hero-headline{
+      font-size:clamp(1.7rem,3.6vw,2.4rem);
     }
 
     /* sinhala */
