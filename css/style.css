@@ -227,7 +227,7 @@
     .phone-device.phone-iphone{
       background:linear-gradient(145deg,#3a3a3c,#0a0a0a);
       border-radius:54px;
-      padding: 4px;
+      padding: 5px;
     }
     .phone-device.phone-iphone .phone-screen{border-radius:46px}
     .phone-device.phone-iphone .phone-screen::before{
