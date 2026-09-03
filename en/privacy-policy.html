@@ -99,7 +99,7 @@
     .toc ol li a::before{content:counter(toc);color:var(--primary-d);font-weight:800;min-width:18px}
     .toc ol li a:hover{color:var(--primary-d)}
 
-    /* Data tables */
+   /* Data tables */
     .table-wrap{
       overflow-x:auto;-webkit-overflow-scrolling:touch;
       border:1.5px solid var(--primary-l);border-radius:var(--radius);
@@ -124,11 +124,16 @@
     table.matrix{border-collapse:collapse;width:100%;min-width:900px;font-size:.8rem}
     table.matrix th,table.matrix td{padding:8px 9px;border:1px solid rgba(245,165,140,.22);text-align:center}
     table.matrix thead th{background:var(--primary-l);color:var(--dark);font-weight:800}
-    table.matrix th.rowhead{
+    /*table.matrix th.rowhead{
       text-align:left;background:var(--off-white);color:var(--dark);
       font-weight:700;min-width:210px;position:sticky;left:0;z-index:1;
     }
-    table.matrix tbody tr:nth-child(even) th.rowhead{background:#fff4ef}
+    table.matrix tbody tr:nth-child(even) th.rowhead{background:#fff4ef}*/
+    table.matrix th.rowhead{
+  text-align:left;background:#fff4ef;color:var(--dark);
+  font-weight:700;min-width:210px;position:sticky;left:0;z-index:2;
+}
+table.matrix thead th.rowhead{z-index:3}
     .yn{font-weight:800}
     .yn.y{color:#2e9c6b}
     .yn.n{color:var(--light-txt)}
@@ -534,7 +539,7 @@
         <div class="k">Mobile no.</div>
         <div class="v">+94 11 4731731 / +94 11 4731900</div>
       </div>
-        <div class="contact-row">
+      <div class="contact-row">
       <div class="k">Request type</div>
         <div class="v">
           <ul style="list-style:none;margin:0;padding-left:0;">
@@ -564,11 +569,6 @@
     <p class="policy-updated" style="margin-top:28px", style="color: red;">
       Last updated: 23 June 2026      
     </p>
-
-    
-
-    
-
   </div>
 </main>
 <footer class="policy-footer" style="padding: 5px 5%;">
