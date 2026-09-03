@@ -229,7 +229,7 @@
       border-radius:54px;
       padding: 5px;
     }
-    .phone-device.phone-iphone .phone-screen{border-radius:46px}
+    .phone-device.phone-iphone .phone-screen{border-radius:50px}
     .phone-device.phone-iphone .phone-screen::before{
       content:'';position:absolute;
       top:12px;left:50%;transform:translateX(-50%);
@@ -241,7 +241,7 @@
     .phone-device.phone-samsung{
       background:linear-gradient(145deg,#3d3d40,#1b1b1d);
       border-radius:32px;
-      padding:5px;
+      padding: 5px;
     }
     .phone-device.phone-samsung .phone-screen{border-radius:25px}
     .phone-device.phone-samsung .phone-screen::before{
@@ -503,6 +503,20 @@
       .footer-inner{grid-template-columns:1fr}
       .nav-links{display:none}
       .reviews-columns{grid-template-columns:1fr}
+      /* On phones the logo + language switcher + this CTA no longer fit on
+         one row — the CTA was overflowing past the right edge of the screen
+         (getting clipped) in every language. The same "Download" action is
+         already prominent in the hero and #download sections, so hide the
+         header copy of it here instead of letting it push off-screen. */
+      .nav-cta{display:none}
+    }
+    /* Below ~380px even the logo + language switcher can get tight —
+       tighten the nav's own spacing so it stays comfortably on one line. */
+    @media(max-width:380px){
+      nav{padding:10px 4%}
+      .nav-logo img{height:28px}
+      .lang-switcher{gap:3px;padding:3px 4px}
+      .lang-btn{padding:5px 8px;font-size:0.74rem}
     }
     @media(max-width:500px){
       .phone-device.phone-back{width:160px}
@@ -529,9 +543,14 @@
     [data-lang="ta"] .tool-title,[data-lang="ta"] .r-title{
       line-height:1.5;
     }
-    /* Sinhala script renders noticeably wider/heavier than Latin at the same
-       font-size, which was pushing the hero title too big — scale it down */
-    [data-lang="si"] h1.hero-headline{
+    /* Sinhala and Tamil script render noticeably wider/heavier than Latin at
+       the same font-size, which was pushing the hero title too big and out
+       of proportion with the rest of the section on mobile — scale both
+       down the same way (Tamil was missing this and stayed at the larger
+       Latin/English size, which is what threw off the alignment of the
+       hero section in Tamil specifically). */
+    [data-lang="si"] h1.hero-headline,
+    [data-lang="ta"] h1.hero-headline{
       font-size:clamp(1.7rem,3.6vw,2.4rem);
     }
 
