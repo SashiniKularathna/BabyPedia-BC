@@ -501,22 +501,50 @@
       .hero-visual{order:-1}
       .fb-left,.fb-right{display:none}
       .footer-inner{grid-template-columns:1fr}
-      .nav-links{display:none}
       .reviews-columns{grid-template-columns:1fr}
-      /* On phones the logo + language switcher + this CTA no longer fit on
-         one row — the CTA was overflowing past the right edge of the screen
-         (getting clipped) in every language. The same "Download" action is
-         already prominent in the hero and #download sections, so hide the
-         header copy of it here instead of letting it push off-screen. */
-      .nav-cta{display:none}
+
+      /* ── Mobile header ──────────────────────────────
+         Logo + nav links + language switcher + the download button don't
+         fit on one row on a phone. Instead of hiding any of it, wrap the
+         header onto three rows: [logo | language switcher] on top, the
+         page links centered underneath, and the download button centered
+         on its own row below that. `nav-right` is just a grouping wrapper
+         around the language switcher + button — display:contents removes
+         its box so both become direct, independently-orderable children
+         of nav's flex layout. */
+      nav{flex-wrap:wrap;row-gap:10px;padding:10px 4%}
+      .nav-right{display:contents}
+      .nav-logo{order:1}
+      .lang-switcher{order:2}
+      .nav-links{
+        order:3;flex-basis:100%;
+        justify-content:center;gap:20px;
+      }
+      .nav-cta{
+        order:4;
+        /* fixed box so the button is the same size in every language,
+           instead of stretching to fit each translation's text length */
+        width:210px;flex:0 0 auto;margin:0 auto;
+        min-height:38px;box-sizing:border-box;
+        display:flex;align-items:center;justify-content:center;
+        text-align:center;white-space:normal;line-height:1.15;
+        padding:8px 14px;font-size:0.78rem;
+      }
+      /* nav is now taller (3 rows) than the single-row height the hero's
+         fixed padding-top was written for — grow it to match so the hero
+         heading isn't tucked under the fixed header. */
+      .hero{padding-top:150px}
     }
-    /* Below ~380px even the logo + language switcher can get tight —
-       tighten the nav's own spacing so it stays comfortably on one line. */
+    /* Below ~380px, tighten spacing further so nothing feels cramped. */
     @media(max-width:380px){
-      nav{padding:10px 4%}
+      nav{padding:10px 3%}
       .nav-logo img{height:28px}
       .lang-switcher{gap:3px;padding:3px 4px}
       .lang-btn{padding:5px 8px;font-size:0.74rem}
+      .nav-links{gap:14px}
+      .nav-links a{font-size:0.8rem}
+      .nav-cta{width:190px;font-size:0.72rem}
+      .hero{padding-top:160px}
     }
     @media(max-width:500px){
       .phone-device.phone-back{width:160px}
