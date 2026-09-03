@@ -355,11 +355,16 @@
     table.matrix{border-collapse:collapse;width:100%;min-width:900px;font-size:.8rem}
     table.matrix th,table.matrix td{padding:8px 9px;border:1px solid rgba(245,165,140,.22);text-align:center}
     table.matrix thead th{background:var(--primary-l);color:var(--dark);font-weight:800}
-    table.matrix th.rowhead{
+    /*table.matrix th.rowhead{
       text-align:left;background:var(--off-white);color:var(--dark);
       font-weight:700;min-width:210px;position:sticky;left:0;z-index:1;
     }
-    table.matrix tbody tr:nth-child(even) th.rowhead{background:#fff4ef}
+    table.matrix tbody tr:nth-child(even) th.rowhead{background:#fff4ef}*/
+    table.matrix th.rowhead{
+  text-align:left;background:#fff4ef;color:var(--dark);
+  font-weight:700;min-width:210px;position:sticky;left:0;z-index:2;
+}
+table.matrix thead th.rowhead{z-index:3}
     .yn{font-weight:800}
     .yn.y{color:#2e9c6b}
     .yn.n{color:var(--light-txt)}
