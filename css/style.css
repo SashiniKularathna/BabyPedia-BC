@@ -971,6 +971,6 @@
 
       .avail { display:inline-flex; flex-wrap:wrap; justify-content:center; align-items:center;
            gap:10px; font-weight:600; color:#374151; }
-      .lang-pill { background:rgba(143, 59, 138, 0.6); color: #ecfdf5; padding:6px; border-radius:999px; font-weight:700; font-size: xx-small; }
-      .free { display:inline-flex; align-items:center; gap:6px; background:rgba(143, 59, 138, 0.6); color:#ecfdf5;
+      .lang-pill { background:linear-gradient(135deg,#FDE8E0,#f5b8a2); color: black; padding:6px; border-radius:999px; font-weight:700; font-size: xx-small; }
+      .free { display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,#FDE8E0,#f5b8a2); color: black;
           padding:6px; border-radius:999px; font-weight:700; font-size: xx-small; }
