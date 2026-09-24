@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Babypedia – Your Trusted Baby Companion App</title>
     <link rel="StyleSheet" href="css/style.css">
+    <!-- Section 1 (Hero) – phone layout fixes only -->
+    <style>
+      @media (max-width: 768px) {
+        .hero { padding: 90px 16px 48px; height: auto; min-height: auto; overflow: hidden; }
+        .hero-inner { display: flex; flex-direction: column; align-items: center; gap: 36px;
+                      width: 100%; max-width: 100%; padding: 0; margin: 0 auto; text-align: center; }
+        .hero-content { width: 100%; max-width: 100%; display: flex; flex-direction: column;
+                        align-items: center; text-align: center; padding: 0; }
+        .hero-content > div { width: 100%; }
+        .hero-headline { font-size: clamp(1.9rem, 8vw, 2.5rem); line-height: 1.2; margin: 10px 0; }
+        .hero-sub { font-size: 0.95rem; line-height: 1.6; max-width: 100%; margin: 0 auto; }
+        .hero-content p { margin-left: auto; margin-right: auto; }
+        .hero-content img[src*="Sleepyheads"],
+        .hero-content img[src*="LOGO only"] { display: inline-block; margin: 6px 8px 0; vertical-align: middle; }
+
+        .store-buttons { flex-wrap: wrap; justify-content: center; gap: 10px; width: 100%; margin: 0 auto; }
+        .store-buttons .store-btn { flex: 1 1 150px; max-width: 190px; margin: 0; justify-content: center; box-sizing: border-box; }
+        .store-buttons .hero-qr-card { flex: 0 0 auto; width: auto; margin: 6px auto 0; }
+        .hero-qr-block { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 6px; }
+        .hero-qr-label { text-align: center; }
+
+        .hero-trust { justify-content: center; flex-wrap: wrap; gap: 8px; text-align: center;
+                      font-size: 0.85rem; margin: 18px auto 0; max-width: 100%; }
+
+        .hero-visual { position: relative; width: 100%; max-width: 360px; margin: 8px auto 28px;
+                       display: flex; justify-content: center; }
+
+        /* Place phone mockups right after the "From pregnancy..." paragraph */
+        .hero-inner { gap: 0; }
+        .hero-content { display: contents; }
+        .hero-content > * { order: 3; width: 100%; }
+        .hero-content > :nth-child(-n+5) { order: 1; }
+        .hero-visual { order: 2; }
+        .hero-content > br { display: none; }
+        .hero-content > div:nth-child(3) { margin-bottom: 14px; }
+        .hero-content > div:nth-child(5) { margin-bottom: 28px; }
+        .hero-content > div:nth-child(6) { margin-bottom: 18px; }
+        .phones-wrap { position: relative; width: 100%; height: 420px; margin: 0 auto; }
+        .phones-wrap .phone-device { position: absolute; width: 175px; max-width: 48vw; }
+        .phones-wrap .phone-back  { left: 4%;  top: 40px; transform: rotate(-6deg); }
+        .phones-wrap .phone-front { right: 4%; top: 0;    transform: rotate(4deg); }
+        .phone-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .float-badge { font-size: 0.75rem; padding: 8px 10px; z-index: 5; }
+        .fb-left  { position: absolute; left: 0;  right: auto; top: 10px;    bottom: auto; }
+        .fb-right { position: absolute; right: 0; left: auto;  bottom: 20px; top: auto; }
+      }
+
+      @media (max-width: 400px) {
+        .phones-wrap { height: 360px; }
+        .phones-wrap .phone-device { width: 150px; }
+        .store-buttons .store-btn { flex-basis: 100%; max-width: 240px; }
+      }
+    </style>
 </head>
 <body>
     <!-- NAV -->
@@ -52,7 +106,7 @@
 
       <div>
         <h1 class="hero-headline">
-        <span data-en>Your companion through <em>parenthood.</em></span>
+        <span data-en>Your Trusted companion through <em>parenthood.</em></span>
         <span data-si>ඔබගේ මව්පිය ගමනට අවශ්‍ය සියල්ල, <em>එක් විශ්වාසනීය APP එකක.</em></span>
         <span data-ta>உங்கள் குழந்தைக்கு தேவையானவை,<em>ஒரே Appல்.</em></span>
         </h1>
@@ -85,7 +139,7 @@
         </p>
       </div><br>
 
-      <div class="store-buttons">
+      <div class="store-buttons" style="display:flex; align-items:center">
         <a href="https://play.google.com/store" target="_blank" rel="noopener" class="store-btn google-btn" style="height: 50px;">
           <img src="Images/Google Play.png" alt="Google Play" class="store-icon">
           <div class="store-btn-label">
@@ -484,7 +538,7 @@
   </div>
 
   <!--Social Media-->
-  <div class="social-links">
+  <div class="social-links" style="display:flex; align-items:center"l>
     <p class="dl-note">
       <span data-en>Connect with us</span>
       <span data-si>අප සමඟ සම්බන්ධ වන්න</span>
