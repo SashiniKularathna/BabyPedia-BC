@@ -105,7 +105,7 @@
     <img src="Images/LOGO only.png" alt="Logo" style="height:40px; width:auto; display:block; flex-shrink:0;">
     <div style="flex:0 1 max(0px, calc((100vw - 768px) * 9999));"></div>
   </div>
-</div>
+</div><br>
 
       <div class="avail">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
@@ -113,11 +113,13 @@
         <span class="lang-pill ta">தமிழ்</span>
         <span class="lang-pill">English</span>
         <span class="free">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>100% Free
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <span data-en>100% Free</span>
+        <span data-si>100% නොමිලේ</span>
+        <span data-ta>100% இலவசம்</span>
         </span>
       </div>
-
-      <div class="store-buttons" style="display:flex; align-items:center">
+      <div class="store-buttons" style="display:flex; padding-top: 10px; align-items:center">
         <a href="https://play.google.com/store" target="_blank" rel="noopener" class="store-btn google-btn" style="height: 50px;">
           <img src="Images/Google Play.png" alt="Google Play" class="store-icon">
           <div class="store-btn-label">
@@ -457,14 +459,14 @@
       <span data-si> දෙමව්පිය ගමනේ සෑම අදියරකදීම ඔබට අවශ්‍ය විශ්‍වාසනීය මගපෙන්වීම ලබාදීම සඳහා Baby Cheramy වෙතින් ලැබෙන අත්වැලක්.</span>
       <span data-ta>பெற்றோராக உங்கள் பயணத்தை ஒவ்வொரு கட்டத்திலும் நம்பிக்கையுடன் முன்னெடுத்துச் செல்ல Baby Cheramy உங்களுக்கு உறுதுணையாக இருந்திடும்.</span>
     </p>
-    <div class="download-buttons">
+    <!--<div class="download-buttons">
 
-      <!-- Google Play + QR -->
+      
       <div class="dl-btn-wrap">
         <a href="https://play.google.com/store" target="_blank" rel="noopener" class="dl-btn db-google">
           <img src="Images/Google Play.png" alt="Google Play" class="store-icon">
           <div class="dl-btn-text">
-            <small><span data-en>Get it on</span><span data-si>බාගත කරන්න</span><span data-ta>பெறுக</span></small>
+            <small><span data-en>Download on the</span><span data-si>බාගත කරන්න</span><span data-ta>பெறுக</span></small>
             <strong>Google Play</strong>
           </div>
           <span class="qr-hint">
@@ -483,7 +485,7 @@
         </div>
       </div>
 
-      <!-- App Store + QR -->
+      
       <div class="dl-btn-wrap">
         <a href="https://apps.apple.com" target="_blank" rel="noopener" class="dl-btn db-apple">
           <img src="Images/App Store.png" alt="App Store" height="30px" width="auto" class="apple-icon">
@@ -507,7 +509,60 @@
         </div>
       </div>
 
+    </div>-->
+
+    <div class="download-buttons" style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; max-width:460px; margin:0 auto;">
+
+  <!-- Google Play + QR -->
+  <div class="dl-btn-wrap" style="min-width:0;">
+    <a href="https://play.google.com/store" target="_blank" rel="noopener" class="dl-btn db-google" style="width:100%; height:56px; box-sizing:border-box; display:flex; align-items:center; gap:10px; padding:0 14px;">
+      <img src="Images/Google Play.png" alt="Google Play" class="store-icon" style="width:26px; height:26px; object-fit:contain; flex-shrink:0;">
+      <div class="dl-btn-text" style="flex:1; min-width:0; overflow:hidden; white-space:nowrap; text-align:left;">
+        <small><span data-en>Download on the</span><span data-si>බාගත කරන්න</span><span data-ta>பெறுக</span></small>
+        <strong>Google Play</strong>
+      </div>
+      <span class="qr-hint" style="flex-shrink:0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/></svg>
+      </span>
+    </a>
+    <div class="qr-popup">
+      <div class="qr-popup-label"><span data-en>Scan to download</span><span data-si>බාගත කිරීමට ස්කෑන් කරන්න</span><span data-ta>பதிவிறக்க ஸ்கேன் செய்யுங்கள்</span></div>
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&color=2D1020&bgcolor=ffffff&qzone=1&data=https://play.google.com/store/apps/details?id=com.babypedia" alt="Google Play QR Code" width="140" height="140"/>
+      </div>
+      <div class="qr-store-label">
+        <img src="Images/Google Play.png" alt="Google Play" class="store-icon">
+        Google Play
+      </div>
     </div>
+  </div>
+
+  <!-- App Store + QR -->
+  <div class="dl-btn-wrap" style="min-width:0;">
+    <a href="https://apps.apple.com" target="_blank" rel="noopener" class="dl-btn db-apple" style="width:100%; height:56px; box-sizing:border-box; display:flex; align-items:center; gap:10px; padding:0 14px;">
+      <img src="Images/App Store.png" alt="App Store" class="apple-icon" style="width:26px; height:26px; object-fit:contain; flex-shrink:0; border-radius:6px;">
+      <div class="dl-btn-text" style="flex:1; min-width:0; overflow:hidden; white-space:nowrap; text-align:left;">
+        <small><span data-en>Download on the</span><span data-si>බාගත කරන්න</span><span data-ta>பதிவிறக்கம்</span></small>
+        <strong>App Store</strong>
+      </div>
+      <span class="qr-hint" style="flex-shrink:0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/></svg>
+      </span>
+    </a>
+    <div class="qr-popup">
+      <div class="qr-popup-label"><span data-en>Scan to download</span><span data-si>බාගත කිරීමට ස්කෑන් කරන්න</span><span data-ta>பதிவிறக்க ஸ்கேன் செய்யுங்கள்</span></div>
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&color=2D1020&bgcolor=ffffff&qzone=1&data=https://apps.apple.com/app/babypedia" alt="App Store QR Code" width="140" height="140"/>
+      </div>
+      <div class="qr-store-label">
+        <img src="Images/Apple_logo_black.svg" alt="Apple" height="20" width="auto">
+        App Store
+      </div>
+    </div>
+  </div>
+
+</div>
+
     <p class="dl-note">
       <span data-en>Free to download · Available in English, Sinhala &amp; Tamil <span class="qr-desktop-hint"><br>click or hover the buttons above to scan QR codes on your phone</span></span>
       <span data-si>නොමිලේ බාගත කිරීමට · ඉංග්‍රීසි, සිංහල සහ දෙමළ භාෂාවලින් ලබා ගත හැකිය</span>
