@@ -70,7 +70,7 @@
     /* ─── HERO ──────────────────────────────────────── */
     .hero{
       display:flex;align-items:center;
-      padding:65px 5% 10px;
+      padding:70px 5% 10px;
       background:linear-gradient(150deg,#fff5f0 0%,#fff9f7 45%,#fff0ea 100%);
       position:relative;overflow:hidden;
     }
@@ -478,7 +478,7 @@
       padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08);
     }
     .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-    .footer-logo img{height:30px;width:auto}
+    .footer-logo img{height:40px;width:auto}
     .footer-desc{font-size:0.87rem;line-height:1.6;max-width:280px}
     .footer-col-title{color:#fff;font-weight:800;margin-bottom:10px;font-size:0.9rem}
     .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -972,5 +972,5 @@
       .avail { display:inline-flex; flex-wrap:wrap; justify-content:center; align-items:center;
            gap:10px; font-weight:600; color:#374151; }
       .lang-pill { background:linear-gradient(135deg,#fbbda4,#fda889); color: white; padding:6px; border-radius:999px; font-weight:700; font-size: xx-small; }
-      .free { display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,#fbbda4,#fda889); color: white;
+      .free { display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,#fbbda4,#fda889); color:white;
           padding:6px; border-radius:999px; font-weight:700; font-size: xx-small; }
